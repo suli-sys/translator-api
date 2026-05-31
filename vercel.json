@@ -1,27 +1,10 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "api/index.js",
-      "use": "@vercel/node"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/health",
-      "dest": "api/index.js"
-    },
-    {
-      "src": "/translate(.*)",
-      "dest": "api/index.js"
-    },
-    {
-      "src": "/languages",
-      "dest": "api/index.js"
-    },
-    {
-      "src": "/",
-      "dest": "api/index.js"
-    }
+  "rewrites": [
+    { "source": "/health", "destination": "/api/health" },
+    { "source": "/translate", "destination": "/api/translate" },
+    { "source": "/translate/:path*", "destination": "/api/translate" },
+    { "source": "/languages", "destination": "/api/languages" }
   ]
 }
+
