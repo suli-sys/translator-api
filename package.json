@@ -1,0 +1,28 @@
+{
+  "name": "screen-translator-api",
+  "version": "1.0.0",
+  "description": "实时屏幕文字翻译API - 支持手机端和电脑端",
+  "main": "translate-server-express.js",
+  "scripts": {
+    "start": "node translate-server-express.js",
+    "dev": "nodemon translate-server-express.js"
+  },
+  "keywords": [
+    "translator",
+    "api",
+    "screen",
+    "ocr",
+    "chinese",
+    "realtime"
+  ],
+  "author": "花间同学",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "axios": "^1.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
