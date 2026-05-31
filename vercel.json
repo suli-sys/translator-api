@@ -8,7 +8,19 @@
   ],
   "routes": [
     {
-      "src": "/(.*)",
+      "src": "/health",
+      "dest": "translate-server-express.js"
+    },
+    {
+      "src": "/translate(.*)",
+      "dest": "translate-server-express.js"
+    },
+    {
+      "src": "/languages",
+      "dest": "translate-server-express.js"
+    },
+    {
+      "src": "/",
       "dest": "translate-server-express.js"
     }
   ]
